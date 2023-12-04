@@ -1,16 +1,13 @@
 package laboratory3.stack;
-
-import java.util.ArrayList;
-import java.util.EmptyStackException;
 import laboratory3.interf.Stack;
 
 public class ArrayStack<T> implements Stack<T>{
     private int top;
     private static final int capacity = 5;
-    private T[] stackelem;
+    private T[] stackElem;
     public ArrayStack(){
         top =-1;
-        stackelem = (T[]) new Object[capacity];
+        stackElem = (T[]) new Object[capacity];
     }
     @Override
     public boolean isEmpty(){
@@ -25,7 +22,7 @@ public class ArrayStack<T> implements Stack<T>{
         if(isFull()){
             return false;
         }
-        stackelem[++top] = item;
+        stackElem[++top] = item;
         return true;
     }
     @Override
@@ -33,14 +30,14 @@ public class ArrayStack<T> implements Stack<T>{
         if(isEmpty()){
            return null;
         }
-        return stackelem[top--];
+        return stackElem[top--];
     }
     @Override
     public T peek(){
         if(isEmpty()){
             return null;
         }
-        return stackelem[top];
+        return stackElem[top];
     }
 
 
