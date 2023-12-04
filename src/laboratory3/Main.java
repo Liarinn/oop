@@ -2,27 +2,34 @@ package laboratory3;
 
 import laboratory3.interf.Stack;
 import laboratory3.stack.ArrayStack;
+import laboratory3.stack.LinkedListStack;
 import laboratory3.stack.ResizableArrayStack;
 
 public class Main {
     public static void main(String[] args) {
         Stack<Integer> arrayStack = new ArrayStack<>();
         Stack<Integer> resizableStack = new ResizableArrayStack<>();
+        Stack<Integer> linkedListStack = new LinkedListStack<>();
 
-
-        System.out.println("Perform operations on ArrayStack: \n");
+        System.out.println("Perform operations on ArrayStack:");
         arrayStack.push(55);
         arrayStack.push(4);
         System.out.println(arrayStack.pop());
         System.out.println(arrayStack.isFull());
-        System.out.println(arrayStack.isEmpty());
+        System.out.println(arrayStack.isEmpty() + "\n");
 
-
-        System.out.println("Perform operations on ResizableArrayStack: \n");
+        System.out.println("Perform operations on ResizableArrayStack:");
         resizableStack.push(7);
         resizableStack.push(9);
         System.out.println(resizableStack.pop());
         System.out.println(resizableStack.isFull());
-        System.out.println(resizableStack.isEmpty());
+        System.out.println(resizableStack.isEmpty() + "\n");
+
+        System.out.println("Perform operations on LinkedListStack:");
+        linkedListStack.push(5);
+        linkedListStack.push(43);
+        System.out.println(linkedListStack.pop());
+        System.out.println(linkedListStack.isFull());
+        System.out.println(linkedListStack.isEmpty() + "\n");
     }
 }
